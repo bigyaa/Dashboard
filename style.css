@@ -1,0 +1,270 @@
+:root {
+	--bg-color: hsl(0, 0%, 100%);
+	--top-bg-color: hsl(225, 100%, 98%);
+	--card-bg-color: hsl(227, 47%, 96%);
+	--card-bg-color-hover: hsl(227, 47%, 90%);
+	--text-color: hsl(228, 12%, 44%);
+	--bold-text-color: hsl(230, 17%, 14%);
+
+	--lime-green: hsl(163, 72%, 41%);
+	--bright-red: hsl(356, 69%, 56%);
+
+	--twitter-bg: hsl(195, 100%, 50%);
+	--facebook-bg: hsl(203, 89%, 53%);
+	--instagram-bg-1: hsl(37, 97%, 70%);
+	--instagram-bg-2: hsl(329, 70%, 58%);
+	--youtube-bg: hsl(348, 97%, 39%);
+}
+
+.theme-dark {
+	--bg-color: hsl(230, 17%, 14%);
+	--top-bg-color: hsl(232, 19%, 15%);
+	--card-bg-color: hsl(228, 28%, 20%);
+	--card-bg-color-hover: hsl(228, 28%, 14%);
+	--text-color: hsl(228, 34%, 66%);
+	--bold-text-color: hsl(0, 0%, 100%);
+}
+
+ul li,
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#loader {
+	display: block;
+	position: absolute;
+	top: calc(40% - 1em);
+	left: 48%;
+}
+
+body {
+	background-color: var(--bg-color);
+	font-size: 14px;
+	font-family: "Inter", sans-serif;
+	padding: 0;
+	margin: 0;
+	color: var(--text-color);
+	font-weight: 700;
+}
+
+#mainContainer {
+	display: none;
+}
+
+.main-container {
+	padding: 30px 75px;
+	background: linear-gradient(var(--top-bg-color) 25%, var(--bg-color) 25%);
+}
+
+header,
+.card-sm {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+header .header-left {
+	display: flex;
+	justify-content: baseline;
+	flex-flow: column wrap;
+}
+
+.header-right {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+
+.header-right > div {
+	display: flex;
+	align-items: center;
+}
+
+.mid-section,
+.overview-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-content: center;
+}
+
+.mid-section {
+	margin: 25px 0;
+}
+
+.overview-container {
+	margin: 0;
+}
+
+h2 {
+	margin-bottom: 8px;
+}
+
+.card-sm,
+.card-lg {
+	min-width: 250px;
+	background-color: var(--card-bg-color);
+	margin: 18px;
+	text-align: center;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.card-sm:hover,
+.card-lg:hover {
+	background-color: var(--card-bg-color-hover);
+}
+
+.card-header {
+	margin: 35px 0 15px;
+}
+
+.card-header span {
+	vertical-align: middle;
+}
+
+.card-footer {
+	margin: 25px 0;
+}
+
+.card-sm {
+	min-width: 300px;
+	box-sizing: content-box;
+	justify-content: space-around;
+	padding: 25px 0;
+	height: 85px;
+}
+
+.card-sm .left,
+.card-sm .right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.card-sm .left {
+	text-align: initial;
+}
+.facebook {
+	border-top: 5px solid var(--facebook-bg);
+}
+
+.twitter {
+	border-top: 5px solid var(--twitter-bg);
+}
+
+.instagram {
+	border-top: 5px solid transparent;
+	border-image: linear-gradient(
+		to right,
+		var(--instagram-bg-1),
+		var(--instagram-bg-2)
+	);
+	border-image-slice: 1;
+}
+
+.youtube {
+	border-top: 5px solid var(--youtube-bg);
+}
+
+.stat-green {
+	color: var(--lime-green);
+	font-weight: 700;
+}
+
+.stat-red {
+	color: var(--bright-red);
+	font-weight: 700;
+}
+
+.card-footer img,
+.stat-green img,
+.stat-red img {
+	padding-bottom: 2px;
+}
+
+.followers {
+	letter-spacing: 4px;
+	font-weight: 400;
+}
+
+.bold,
+h1 {
+	color: var(--bold-text-color);
+}
+
+h1 {
+	margin-bottom: 2px;
+}
+
+.toggle-btn {
+	position: relative;
+	display: inline-block;
+	width: 45px;
+	height: 25px;
+	margin: 0;
+	padding: 0;
+	background: var(--lime-green);
+	-webkit-appearance: none;
+	border-radius: 20px;
+	outline: none;
+}
+
+.toggle-btn:hover {
+	cursor: pointer;
+}
+
+.toggle-btn::after {
+	position: absolute;
+	content: "";
+	width: 21px;
+	height: 21px;
+	border-radius: 50%;
+	background-color: var(--top-bg-color);
+	top: 2px;
+	left: 2px;
+	transition: ease-in 0.3s;
+}
+
+.toggle-btn:checked {
+	background-color: var(--text-color);
+}
+
+.toggle-btn:checked::after {
+	left: 23px;
+}
+
+.attribution{
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 630px) {
+	.header-right {
+		width: 100%;
+	}
+
+	.header-right > div {
+		justify-content: space-between;
+	}
+
+	.header-left {
+		width: 100%;
+		padding-bottom: 20px;
+		margin-bottom: 15px;
+		border-bottom: 2px solid;
+	}
+
+	h1 {
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.main-container {
+		background: var(--bg-color);
+		height: 100%;
+	}
+}

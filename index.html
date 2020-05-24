@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link href="helper.css" rel="stylesheet" type="text/css" />
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<title>Social Media Dashboard</title>
+	</head>
+	<body>
+		<div class="lds-circle" id="loader"><div></div></div>
+		<div class="main-container" id="mainContainer">
+			<header>
+				<div class="header-left">
+					<h1>Social Media Dashboard</h1>
+					<p>Total Followers: 23,004</p>
+				</div>
+				<div class="header-right">
+					<div>
+						<label class="toggle-label" for="themeToggle"
+							>Dark Mode&emsp;</label
+						>
+						<input
+							type="checkbox"
+							id="themeToggle"
+							class="toggle-btn"
+							onclick="toggleTheme()"
+						/>
+					</div>
+				</div>
+			</header>
+			<section>
+				<ul class="mid-section">
+					<li class="card-lg facebook">
+						<div class="card-header">
+							<span
+								><img src="./images/icon-facebook.svg" alt="Facebook"
+							/></span>
+							<span>&ensp;@nathanf</span>
+						</div>
+						<div>
+							<p class="text-xl bold">1987</p>
+							<p class="text-sm text-upper followers">FOLLOWERS</p>
+						</div>
+						<div class="card-footer stat-green">
+							<span><img src="./images/icon-up.svg" alt="Increase" /> </span>
+							<span class="text-sm"> 12 Today</span>
+						</div>
+					</li>
+					<li class="card-lg twitter">
+						<div class="card-header">
+							<span><img src="./images/icon-twitter.svg" alt="Twitter" /></span>
+							<span>&ensp;@nathanf</span>
+						</div>
+						<div>
+							<p class="text-xl bold">1044</p>
+							<p class="text-sm text-upper followers">FOLLOWERS</p>
+						</div>
+						<div class="card-footer stat-green">
+							<span><img src="./images/icon-up.svg" alt="Increase" /> </span>
+							<span class="text-sm"> 99 Today</span>
+						</div>
+					</li>
+					<li class="card-lg instagram">
+						<div class="card-header">
+							<span
+								><img src="./images/icon-instagram.svg" alt="Instagram"
+							/></span>
+							<span>&ensp;@realnathanf</span>
+						</div>
+						<div>
+							<p class="text-xl bold">11k</p>
+							<p class="text-sm text-upper followers">FOLLOWERS</p>
+						</div>
+						<div class="card-footer stat-green">
+							<span><img src="./images/icon-up.svg" alt="Increase" /> </span>
+							<span class="text-sm"> 1099 Today</span>
+						</div>
+					</li>
+					<li class="card-lg youtube">
+						<div class="card-header">
+							<span><img src="./images/icon-youtube.svg" alt="Youtube" /></span>
+							<span>&ensp;Nathan F.</span>
+						</div>
+						<div>
+							<p class="text-xl bold">8239</p>
+							<p class="text-sm text-upper followers">FOLLOWERS</p>
+						</div>
+						<div class="card-footer stat-red">
+							<span><img src="./images/icon-down.svg" alt="Decrease" /> </span>
+							<span class="text-sm"> 144 Today</span>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section class="footer-section">
+				<h2>Overview - Today</h2>
+				<ul class="overview-container">
+					<li class="card-sm">
+						<div class="left">
+							<p class="text-md">Page Views</p>
+							<p class="text-lg bold">87</p>
+						</div>
+						<div class="right">
+							<div><img src="./images/icon-facebook.svg" alt="Facebook" /></div>
+							<div class="stat-green">
+								<span><img src="./images/icon-up.svg" alt="Increase" /></span>
+								<span class="text-sm">3%</span>
+							</div>
+						</div>
+					</li>
+					<li class="card-sm">
+						<div class="left">
+							<p class="text-md">Page Views</p>
+							<p class="text-lg bold">52</p>
+						</div>
+						<div class="right">
+							<div><img src="./images/icon-facebook.svg" alt="Facebook" /></div>
+							<div class="stat-red">
+								<span><img src="./images/icon-down.svg" alt="Decrease" /></span>
+								<span class="text-sm">2%</span>
+							</div>
+						</div>
+					</li>
+					<li class="card-sm">
+						<div class="left">
+							<p class="text-md">Page Views</p>
+							<p class="text-lg bold">5462</p>
+						</div>
+						<div class="right">
+							<div><img src="./images/icon-instagram.svg" alt="Instagram" /></div>
+							<div class="stat-green">
+								<span><img src="./images/icon-up.svg" alt="Increase" /></span>
+								<span class="text-sm">2257%</span>
+							</div>
+						</div>
+					</li>
+					<li class="card-sm">
+						<div class="left">
+							<p class="text-md">Page Views</p>
+							<p class="text-lg bold">52k</p>
+						</div>
+						<div class="right">
+							<div><img src="./images/icon-instagram.svg" alt="Instagram" /></div>
+							<div class="stat-green">
+								<span><img src="./images/icon-up.svg" alt="Increase" /></span>
+								<span class="text-sm">1375%</span>
+							</div>
+						</div>
+					</li>
+					<li class="card-sm">
+						<div class="left">
+							<p class="text-md">Page Views</p>
+							<p class="text-lg bold">117</p>
+						</div>
+						<div class="right">
+							<div><img src="./images/icon-twitter.svg" alt="Twitter" /></div>
+							<div class="stat-green">
+								<span><img src="./images/icon-up.svg" alt="Increase" /></span>
+								<span class="text-sm">303%</span>
+							</div>
+						</div>
+					</li>
+					<li class="card-sm">
+						<div class="left">
+							<p class="text-md">Page Views</p>
+							<p class="text-lg bold">507</p>
+						</div>
+						<div class="right">
+							<div><img src="./images/icon-twitter.svg" alt="Twitter" /></div>
+							<div class="stat-green">
+								<span><img src="./images/icon-up.svg" alt="Increase" /></span>
+								<span class="text-sm">553%</span>
+							</div>
+						</div>
+					</li>
+					<li class="card-sm">
+						<div class="left">
+							<p class="text-md">Page Views</p>
+							<p class="text-lg bold">107</p>
+						</div>
+						<div class="right">
+							<div><img src="./images/icon-youtube.svg" alt="Youtube" /></div>
+							<div class="stat-red">
+								<span><img src="./images/icon-down.svg" alt="Decrease" /></span>
+								<span class="text-sm">19%</span>
+							</div>
+						</div>
+					</li>
+					<li class="card-sm">
+						<div class="left">
+							<p class="text-md">Page Views</p>
+							<p class="text-lg bold">1407</p>
+						</div>
+						<div class="right">
+							<div><img src="./images/icon-youtube.svg" alt="Youtube" /></div>
+							<div class="stat-red">
+								<span><img src="./images/icon-down.svg" alt="Decrease" /></span>
+								<span class="text-sm">12%</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="https://www.github.com/bigyaa">Bigya Bajracharya</a>.
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
